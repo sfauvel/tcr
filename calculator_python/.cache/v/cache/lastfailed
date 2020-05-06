@@ -1,0 +1,4 @@
+{
+  "calculator_test.py::TestCalculator::test_add_2_number": true,
+  "calculator_test.py::TestCalculator::test_add_negative_number": true
+}

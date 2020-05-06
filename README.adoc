@@ -1,0 +1,40 @@
+= TCR
+
+
+TCR = Test, commit or revert.
+
+The idea came from Kent Beck (link:https://medium.com/@kentbeck_7670/test-commit-revert-870bbd756864[test && commit || revert]) to reducing size of change. 
+
+When you run tests, if they pass, changes are commited. 
+If they failed, your changes are reverted.
+
+You can resume it with command: `test && commit || revert`
+
+== Quick start
+
+Initialize a git repository: +
+`git init && git add . && git commit -m "init"`
+
+Create a script `run_test.sh` that execute test and exit with 0 it they passed and 1 if they failed.
+
+Execute this command to run test and commit or revert: +
+`bash run_test.sh && git commit -am working || git checkout HEAD -- .`
+
+You can view commit done with: +
+`git log --oneline` +
+or +
+`git log --pretty=format:'%C(yellow)%h%Creset %s (%Cblue%cd%Creset)' --date=format:'%H:%M:%S'`
+
+== Resources
+
+* link:https://medium.com/@kentbeck_7670/test-commit-revert-870bbd756864[test && commit || revert], Kent Beck - 2018
+* link:https://medium.com/@kentbeck_7670/limbo-on-the-cheap-e4cfae840330[Limbo on the Cheap], Kent Beck - 2018
+* link:https://medium.com/@tdeniffel/tcr-test-commit-revert-a-test-alternative-to-tdd-6e6b03c22bec[TCR (test && commit || revert). How to use? Alternative to TDD?], Thomas Deniffel, 2018
+
+
+Sounds from: link:http://soundbible.com[]
+////
+http://soundbible.com/1765-Glass-Break.html
+http://soundbible.com/1003-Ta-Da.html
+////
+
