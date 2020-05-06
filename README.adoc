@@ -25,6 +25,25 @@ You can view commit done with: +
 or +
 `git log --pretty=format:'%C(yellow)%h%Creset %s (%Cblue%cd%Creset)' --date=format:'%H:%M:%S'`
 
+== How to
+
+You can found a full example using `tcr.sh [folder]`.
+
+It run script `run_test.sh` in specified folder.
+You can use `calculator_python` as folder that contain a Python program.
+
+It works on Linux with python, pytest, bash and docker.
+
+== Kata
+
+You can experiment it using one of htos kata:
+
+* link:https://github.com/emilybache/GildedRose-Refactoring-Kata[Gilded Rose]
+
+* link:https://github.com/martinsson/BugsZero-Kata[Ugly Trivia]
+
+To make non regression test, you can use: link:https://github.com/approvals[Approvals]
+
 == Resources
 
 * link:https://medium.com/@kentbeck_7670/test-commit-revert-870bbd756864[test && commit || revert], Kent Beck - 2018
